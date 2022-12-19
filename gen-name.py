@@ -2,6 +2,10 @@
 import random
 import sys
 
+if "-h" in sys.argv or "--help" in sys.argv:
+    print("Use -n [int] to generate n number of names. Example: ./gen-name.py -n 10.")
+    exit(0)
+
 with open("first-names.txt", "r") as fnames:
     with open("last-names.txt", "r") as lnames:
         fnames_contents = fnames.readlines()
